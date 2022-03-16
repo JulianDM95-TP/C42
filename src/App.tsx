@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import { Shirts } from './Components/Shirts'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export const App = () => {
+    return (
+        <Body>
+            <Shirts />
+        </Body>
+    )
 }
 
-export default App;
+const Body = styled.div`
+    background-color: rgba(76, 175, 80, 0.3);
+    height: 100%;
+    width: 100;
+    position: relative;
+top: 0px; left: 0px;
+`
