@@ -1,15 +1,27 @@
-export interface ICollection{
-    name: string
-    description: string
-    year: Date
-    shirts: IShirt[]
+export interface IWebBasics{
+    url: string;
 }
 
-export interface IShirt{
-    name: string
-    description: string
-    imgs: string[]
-    sizes: string[]
-    colors: string[]
-    price: number
+export interface IUser{
+  name: string
+  collections: ICollection[]
 }
+
+export interface ICollection extends IWebBasics{
+  name: string;
+  description: string;
+  year: Date;
+  things: IThing[];
+}
+
+export interface IThing extends IWebBasics{
+  name: string;
+  description: string;
+  imgs: string[];
+  sizes: ShirtSize[];
+  colors: ShirtColor[];
+  price: number;
+}
+
+export type ShirtSize = "XXS" | "XS" | "S" | "M" | "L" | "XL" | "XXL";
+export type ShirtColor = "RED" | "GREEN" | "BLUE";
