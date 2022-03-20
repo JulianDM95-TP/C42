@@ -4,7 +4,7 @@ import { Login } from "../Pages/Login";
 import { Register } from "../Pages/Register";
 import { User } from "../Pages/User";
 
-export const PagesRouter = () => {
+export const RouterHandler = () => {
   return (
     <Routes>
       <Route index element={<Home />} />

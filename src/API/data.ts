@@ -1,15 +1,23 @@
 import { IUser } from "../Interfaces/Interfaces";
 
 const usuario1: IUser = {
-    name: "Martin",
+    username: "martin1",
+    name: "martin",
+    lastname: "perez",
     collections: []
 }
 
 const usuario2: IUser = {
-    name: "Jose",
+    username: "jose1",
+    name: "joselito",
+    lastname: "Martinez",
     collections: []
 }
 const usuario3: IUser = {
-    name: "Maria",
+    username: "lopez1",
+    name: "maria",
+    lastname: "Lopez",
     collections: []
 }
+
+export const USERS_HARDCODED: IUser[] = [usuario1, usuario2, usuario3]  

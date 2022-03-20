@@ -3,13 +3,13 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Background } from "./Components/Layout/Background";
 import "./index.css";
-import { PagesRouter } from "./Routes/PagesRouter";
+import { RouterHandler } from "./Routes/RouterHandler";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <Background>
-        <PagesRouter />
+        <RouterHandler />
       </Background>
     </BrowserRouter>
   </React.StrictMode>,

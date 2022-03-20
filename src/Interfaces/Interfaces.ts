@@ -3,7 +3,9 @@ export interface IWebBasics{
 }
 
 export interface IUser{
+  username: string
   name: string
+  lastname: string
   collections: ICollection[]
 }
 
