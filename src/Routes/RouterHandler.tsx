@@ -1,8 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { Collection, Home, Thing } from "../Pages";
-import { Login } from "../Pages/Login";
-import { Register } from "../Pages/Register";
-import { User } from "../Pages/User";
+import { Collection, Home, Login, Register, Thing, User } from "src/Pages";
 
 export const RouterHandler = () => {
   return (
@@ -10,7 +7,7 @@ export const RouterHandler = () => {
       <Route index element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      <Route path={"/:userName"}>
+      <Route path={"/:username"}>
         <Route index element={<User />} />
         <Route path={":collectionName"}>
           <Route index element={<Collection />} />
@@ -18,10 +15,6 @@ export const RouterHandler = () => {
         </Route>
       </Route>
 
-      {/* <Route path={"/collection/:collectionName"}>
-        <Route index element={<Collection />} />
-        <Route path=":shirtName" element={<Shirt />} />
-      </Route> */}
     </Routes>
   );
 };

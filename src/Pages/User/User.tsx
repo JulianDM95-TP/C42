@@ -1,27 +1,25 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { getUser } from "src/API";
+import { IUser } from "src/Interfaces";
 import styled from "styled-components";
-import { getUserData } from "../API/dataHandler";
-import { IUser } from "../Interfaces/Interfaces";
+import { UserContent } from "./UserContent";
+import { UserDoesNotExist } from "./UserDoesNotExist";
 
 export const User = () => {
+  const urlParams = useParams();
+
   const [user, setUser] = useState({} as IUser);
 
   useEffect(() => {
-    setUser(getUserData(params.userName || ""));
+    setUser(getUser(urlParams.username!));
+    // eslint-disable-next-line
   }, []);
 
-  const params = useParams();
 
   return (
     <UserContainer>
-      {user ? (
-        <div>
-          Fullname: {user.name} {user.lastname}
-        </div>
-      ) : (
-        <h1>No existe el usario</h1>
-      )}
+      {user ? <UserContent user={user}  /> : <UserDoesNotExist />}
     </UserContainer>
   );
 };

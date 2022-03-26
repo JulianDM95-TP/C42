@@ -1,10 +1,26 @@
-import { IUser } from "../Interfaces/Interfaces";
+import { ICollection, IUser } from "../Interfaces/Interfaces";
+
+const asd : ICollection = {
+    name: "Verano",
+    description: "Manos en el ano",
+    year: new Date(),
+    things: [],
+    url: "verano"
+}
+
+const asd2 : ICollection = {
+    name: "Invierno",
+    description: "Que frio",
+    year: new Date(),
+    things: [],
+    url: "invierno"
+}
 
 const usuario1: IUser = {
     username: "martin1",
     name: "martin",
     lastname: "perez",
-    collections: []
+    collections: [asd2, asd,asd,asd,asd]
 }
 
 const usuario2: IUser = {
